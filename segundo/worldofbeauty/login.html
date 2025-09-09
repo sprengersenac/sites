@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - World Of Beauty</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">World Of Beauty</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Promoções</a></li>
+                <li class="dropdown">
+                    <a href="categoria.html?category=maquiagem">Maquiagem</a>
+                    <div class="dropdown-content">
+                        <a href="categoria.html?category=maquiagem&subcategory=tudo">Ver Tudo</a>
+                        <a href="categoria.html?category=maquiagem&subcategory=face">Face</a>
+                        <a href="categoria.html?category=maquiagem&subcategory=labios">Lábios</a>
+                        <a href="categoria.html?category=maquiagem&subcategory=olhos">Olhos</a>
+                        <a href="categoria.html?category=maquiagem&subcategory=sobrancelhas">Sobrancelhas</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="categoria.html?category=perfumes">Perfumes</a>
+                    <div class="dropdown-content">
+                        <a href="categoria.html?category=perfumes&subcategory=importados">Importados</a>
+                        <a href="categoria.html?category=perfumes&subcategory=nacionais">Nacionais</a>
+                        <a href="categoria.html?category=perfumes&subcategory=femininos">Femininos</a>
+                        <a href="categoria.html?category=perfumes&subcategory=masculinos">Masculinos</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="categoria.html?category=skincare">Skincare</a>
+                    <div class="dropdown-content">
+                        <a href="categoria.html?category=skincare&subcategory=tipos-de-pele">Tipos de Pele</a>
+                        <a href="categoria.html?category=skincare&subcategory=rotina">Rotina</a>
+                        <a href="categoria.html?category=skincare&subcategory=mascaras">Máscaras</a>
+                        <a href="categoria.html?category=skincare&subcategory=hidratantes">Hidratantes</a>
+                        <a href="categoria.html?category=skincare&subcategory=acidos-e-ativos">Ácidos e Ativos</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="categoria.html?category=cabelos">Cabelos</a>
+                    <div class="dropdown-content">
+                        <a href="categoria.html?category=cabelos&subcategory=feminino">Feminino</a>
+                        <a href="categoria.html?category=cabelos&subcategory=masculino">Masculino</a>
+                        <a href="categoria.html?category=cabelos&subcategory=marcas">Por Marcas</a>
+                        <a href="categoria.html?category=cabelos&subcategory=hidratacao">Hidratação</a>
+                        <a href="categoria.html?category=cabelos&subcategory=nutricao">Nutrição</a>
+                    </div>
+                </li>
+                <li id="admin-menu" class="dropdown" style="display: none;">
+                    <a href="#"><i class="fa-solid fa-gear"></i> Admin</a>
+                    <div class="dropdown-content">
+                        <a href="cadastro-produto.html">Cadastrar Produto</a>
+                        <a href="admin-products.html">Gerenciar Produtos</a>
+                        <a href="admin-users.html">Verificar Usuários</a>
+                    </div>
+                </li>
+
+                <li class="cart-link-container">
+                    <a href="carrinho.html" class="cart-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <span id="cart-count">0</span>
+                </li>
+                <li id="user-profile-link"><a href="login.html" class="user-link"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="global-message" style="opacity: 0;"></div>
+
+    <main class="form-container">
+        <h2>Acesse sua conta</h2>
+        <form id="user-login-form">
+            <div class="form-field">
+                <label for="email_login">Email ou Nome de Usuário:</label>
+                <input type="text" id="email_login" name="email_login" required>
+            </div>
+            <div class="form-field">
+                <label for="senha_login">Senha:</label>
+                <input type="password" id="senha_login" name="senha_login" required>
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            <p class="form-link">Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 World Of Beauty. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script-login.js"></script>
+    <script src="auth.js"></script>
+    <style>
+        form {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 50px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: #ff1493;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            color: white;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    </style>
+</body>
+
+</html>
