@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Caluco IMC</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite seu nome");
+        alert("A seguir, digite apenas os números no formato correto (ex: 1.75; 70)");
+    
+        let altura = parseFloat(prompt("Qual a sua altura (em metros)?"));
+        let peso = parseFloat(prompt("Qual o seu peso (em kg)?"));
+    
+        if (isNaN(altura) || isNaN(peso)) {
+            alert("Por favor, insira valores numéricos válidos para altura e peso.");
+        } else {
+            let imc = peso / (altura * altura);
+            let mensagem = "Olá " + nome + "! Seu IMC é " + imc.toFixed(2) + ". ";
+    
+            if (imc < 18.5) {
+                mensagem += "Você está abaixo do peso.";
+            } else if (imc < 25) {
+                mensagem += "Você está com peso normal.";
+            } else if (imc < 30) {
+                mensagem += "Você está com sobrepeso.";
+            } else if (imc < 35) {
+                mensagem += "Você está com obesidade grau 1.";
+            } else if (imc < 40) {
+                mensagem += "Você está com obesidade grau 2.";
+            } else {
+                mensagem += "Você está com obesidade grau 3 (mórbida).";
+            }
+    
+            alert(mensagem);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de idade</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(45deg, rgb(241, 37, 136), rgb(247, 170, 254));
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80px;
+        border-radius: 15px;
+        color: rgb(241, 37, 70);
+    }
+
+    input,
+    select {
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+
+    button {
+        background-color: rgb(241, 37, 70);
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+    <form id="formulario">
+        <h1>Cálculadora de idade</h1>
+        <input type="text" placeholder="nome" id="nome"> <br><br>
+        <input type="number" placeholder="ano de nascimento" id="nascimento"> <br><br>
+        <input type="number" placeholder=" ano atual" id="atual"> <br><br>
+        <button type="submit">Enviar</button>
+
+        <p id="result"></p>
+    </form>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // impede o envio do formulário
+
+            const nome = document.getElementById('nome').value;
+            const nascimento = parseInt(document.getElementById('nascimento').value);
+            const atual = parseInt(document.getElementById('atual').value);
+            const result = document.getElementById('result');
+
+            let idade = atual - nascimento;
+
+            if (idade < 2) {
+                result.textContent = "Olá, " + nome + "! Você tem " + idade + " ano e é criança! ";
+            } else if (idade < 12) {
+                result.textContent = "Olá, " + nome + "! Você tem " + idade + " anos e é criança! ";
+            } else if (idade <= 17) {
+                result.textContent = "Olá, " + nome + "! Você tem " + idade + " anos e é adolecente! ";
+            } else if (idade <= 59) {
+                result.textContent = "Olá, " + nome + "! Você tem " + idade + " anos e é adulto! ";
+            } else if (idade >= 60) {
+                result.textContent = "Olá, " + nome + "! Você tem " + idade + " anos e é idoso!";
+            }
+        });
+    </script>
+</body>
+
+</html>

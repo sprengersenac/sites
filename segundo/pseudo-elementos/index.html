@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-elementos CSS - Exemplos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(245, 203, 210);
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        .exemplo1::first-line {
+            color: pink;
+            font-weight: bold;
+        }
+
+        .exemplo2::first-letter {
+            color: blueviolet;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .exemplo3::before {
+            content: "👉 ";
+            color: blue;
+        }
+
+        .exemplo4::after {
+            content: " ✔️";
+            color: blue;
+        }
+
+        .exemplo5::selection {
+            background: rgb(128, 177, 244);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Pseudo-elementos CSS - Exemplos</h2>
+    <div class="container">
+
+        <div class="box">
+            <h2>1. p::first-line</h2>
+            <p class="exemplo exemplo1">
+
+                Esta linha ficará com destaque. O restante do parágrafo mantém o estilo padrão. Você pode ver a
+                diferença ao
+                redimensionar a janela.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>2. p::first-letter</h2>
+            <p class="exemplo exemplo2">
+
+                A primeira letra deste parágrafo será maior e colorida, simulando o estilo de livros antigos ou
+                revistas.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>3. p::before</h2>
+            <p class="exemplo exemplo3">
+
+                Este parágrafo possui um símbolo adicionado antes do seu conteúdo com ::before.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>4. p::after</h2>
+            <p class="exemplo exemplo4">
+
+                Este parágrafo adiciona um ícone no final usando ::after.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>5. p::selection</h2>
+            <p class="exemplo exemplo5">
+
+                Selecione este texto com o mouse para ver o efeito do pseudo-elemento ::selection.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

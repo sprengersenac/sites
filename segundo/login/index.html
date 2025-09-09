@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(45deg, rgb(241, 37, 70), rgb(241, 37, 70));
+    }
+
+    form {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80px;
+        border-radius: 15px;
+        color: white;
+    }
+
+    input,
+    select {
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+
+    button {
+        background-color: rgb(241, 37, 70);
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+    <form id="formulario">
+        <h1>Login</h1>
+        <input type="text" placeholder="nome" id="login"> <br><br>
+        <input type="number" placeholder="idade" id="idade"> <br><br>
+        <h3>Possui cadastro?</h3>
+        <select id="possuicadastro">
+            <option value="">Selecione</option>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select> <br><br>
+        <button type="submit">Enviar</button>
+
+        <p id="result"></p>
+    </form>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // impede o envio do formulário
+
+            const login = document.getElementById('login').value;
+            const idade = parseInt(document.getElementById('idade').value);
+            const cadastro = document.getElementById('possuicadastro').value;
+            const result = document.getElementById('result');
+
+            if (!login || isNaN(idade) || cadastro === "") {
+                result.textContent = "Por favor, preencha todos os campos corretamente.";
+                return;
+            }
+
+            if (idade < 12) {
+                result.textContent = "Acesso negado: idade insuficiente para cadastro.";
+            } else if (idade >= 13 && cadastro === "false") {
+                result.textContent = "Acesso parcial permitido, mas é necessário realizar o cadastro";
+            } else if (idade >= 13 && cadastro === "true") {
+                result.textContent = "Acesso parcial permitido. Bem-vindo!";
+            } else if (idade >= 18 && cadastro === false) {
+                result.textContent = "Acesso total permitido, mas é necessário realizar o cadastro.";
+            }
+        });
+    </script>
+</body>
+
+</html>

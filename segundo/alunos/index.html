@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de alunos</title>
+</head>
+<style>
+    body {
+        background-color: pink;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1 {
+        margin-right: 10px;
+    }
+
+    button {
+        background-color: pink;
+        border-color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+</style>
+
+<body>
+        <h1>Cadastro e Análise de Alunos</h1>
+        <button onclick="iniciarCadastro()">Iniciar Cadastro</button>
+        <div id="resultado"></div>
+    <script>
+
+        function iniciarCadastro() {
+            let qtd = parseInt(prompt("Quantos alunos deseja cadastrar?"));
+            while (isNaN(qtd) || qtd <= 0) {
+                qtd = parseInt(prompt("Digite um número válido e maior que 0:"));
+            }
+
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = "";
+
+            for (let i = 1; i <= qtd; i++) {
+                let nome, nota1, nota2, nota3;
+
+                // Nome
+                do {
+                    nome = prompt(`Digite o nome do aluno ${i}:`);
+                } while (!nome);
+
+                // Nota 1
+                do {
+                    nota1 = parseFloat(prompt(`Digite a nota 1 de ${nome}:`));
+                } while (isNaN(nota1));
+
+                // Nota 2
+                do {
+                    nota2 = parseFloat(prompt(`Digite a nota 2 de ${nome}:`));
+                } while (isNaN(nota2));
+
+                do {
+                    nota3 = parseFloat(prompt(`Digite a nota 3 de ${nome}:`));
+                } while (isNaN(nota3));
+
+                let media = (nota1 + nota2 + nota3) / 3;
+                let situacao = media >= 6 ? "Aprovado" : "Reprovado";
+
+                resultado.innerHTML += `<p><strong>${nome}</strong> - Média: ${media.toFixed(2)} - ${situacao}</p>`;
+            }
+        }
+    </script>
+</body>
+
+</html>
