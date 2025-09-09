@@ -1,0 +1,739 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans MT';
+}
+
+.cientista {
+    width: 55%;
+    margin-right: -100px;
+}
+
+.ini {
+    display: inline-flex;
+    color: white;
+    border-radius: 5px;
+}
+
+.color {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(2, 2, 176, 0.116), rgba(2, 2, 176, 0.158), rgba(2, 2, 176, 0.24), rgba(2, 2, 176, 0.253), rgba(2, 2, 176, 0.326), rgba(2, 2, 176, 0.395), rgba(2, 2, 176, 0.502), rgba(2, 2, 176, 0.621), rgba(2, 2, 176, 0.717), rgba(2, 2, 176, 0.813), rgba(2, 2, 176, 0.918),
+            rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176), rgb(2, 2, 176));
+    margin-left: -40%;
+    align-items: center;
+    /* background-image: (rgba(254, 254, 254, 0.094), rgb(61, 36, 254)); */
+    width: 100%;
+}
+
+p {
+    font-size: 17px;
+}
+
+.text {
+    width: 40%;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.suma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+
+.quadra {
+    background-color: rgb(2, 2, 176);
+    color: white;
+    border-radius: 110px;
+    width: 98px;
+    height: 98px;
+    text-align: center;
+    align-items: center;
+    margin: 17px;
+}
+
+.icon {
+    width: 35%;
+    margin-top: 20%;
+}
+
+.hr2 {
+    display: inline-flex;
+    margin-left: 9%;
+}
+
+hr {
+    height: 3px;
+    background-color: rgb(2, 2, 176);
+    width: 500px;
+    margin-left: 16px;
+}
+
+.it {
+    color: rgb(2, 2, 176);
+    margin-left: 44%;
+    margin-top: 67px;
+}
+
+.nac {
+    color: rgb(2, 2, 176);
+    margin-left: 44.6%;
+}
+
+.noticias {
+    margin-left: 15px;
+    margin-top: 12px;
+    padding: 7px;
+    box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    display: inline-flex;
+    border-radius: 6px;
+}
+
+.nots {
+    width: 302px;
+    height: 260px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.fns {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.dir {
+    font-size: 10px;
+    color: rgb(78, 77, 88);
+}
+
+a {
+    color: black;
+}
+
+.inac {
+    color: rgb(2, 2, 176);
+    margin-left: 42.3%;
+    margin-top: 20px;
+}
+
+/* /////////////////// */
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+.projetos {
+    display: inline-flex;
+}
+
+.p1 {
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+        margin-left: 10px;
+        margin-right: -275px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+        z-index: 2;
+    }
+
+
+    .center-image {
+        margin-top: 24px;
+        width: 120px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+        z-index: 2;
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 600px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        z-index: 2;
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.p2{
+    
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: -90%;
+        margin-top: 5px;
+        margin-right: -425px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    }
+
+
+    .center-image {
+        margin-top: 37px;
+        width: 120px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 610px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        /* z-index: 1; */
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.p3{
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: -90%;
+        margin-top: -9px;
+        margin-right: -425px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    }
+
+
+    .center-image {
+        margin-top: 41px;
+        width: 120px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 610px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        /* z-index: 1; */
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.p4{
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: -90%;
+        margin-top: -8px;
+        margin-right: -425px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 121px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    }
+
+
+    .center-image {
+        margin-top: 36px;
+        margin-left: 4px;
+        width: 119px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 610px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        /* z-index: 1; */
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.p5{
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: -90%;
+        margin-top: 5px;
+        margin-right: -425px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        width: 120px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    }
+
+
+    .center-image {
+        margin-top: 20px;
+        width: 150px;
+        margin-left: -13px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 610px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        /* z-index: 1; */
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.p6{
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: -90%;
+        margin-top: -8px;
+        margin-right: -425px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    }
+
+
+    .center-image {
+        margin-top: 37px;
+        width: 120px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 610px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        /* z-index: 1; */
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.p7{
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: -90%;
+        margin-top: -21px;
+        margin-right: -425px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    }
+
+
+    .center-image {
+        margin-top: 37px;
+        width: 120px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 610px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        /* z-index: 1; */
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.p8{
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: -90%;
+        margin-top: 4px;
+        margin-right: -420px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        border-radius: 550px;
+        /*Torna a imagem circular */
+        box-shadow: 0px 4px 12px 0px rgba(2, 2, 176, 0.395);
+    }
+
+
+    .center-image {
+        margin-top: 37px;
+        width: 120px;
+        /* border-radius: 550px; Torna a imagem circular */
+        transition: transform 0.3s ease;
+        /* Transição suave de escala */
+
+    }
+
+    /* Gradiente que aparece sobre a imagem */
+    .gradient-overlay {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        width: 610px;
+        height: 170px;
+        border-radius: 500px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(33, 93, 169, 0.318), rgba(33, 93, 169, 0.818), rgba(33, 93, 169, 0.918), rgba(33, 93, 169, 0.990), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169), rgba(33, 93, 169));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* Para garantir que o gradiente não bloqueie o hover */
+        /* z-index: 1; */
+    }
+
+    .image-wrapper:hover .gradient-overlay {
+        opacity: 1;
+        /* Gradiente visível somente ao passar o mouse sobre a imagem */
+    }
+
+    .image-wrapper:hover .center-image {
+        transform: scale(1.1);
+        /* Pequeno aumento na imagem ao passar o mouse */
+    }
+
+    .text-content {
+        margin-top: 4%;
+        width: 390px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 70px;
+        /* Distância entre a imagem e o texto */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 3;
+        color: white;
+    }
+
+    /* Exibir o texto ao passar o mouse sobre a imagem */
+    .image-wrapper:hover+.text-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
